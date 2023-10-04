@@ -205,6 +205,8 @@ select avg(Annual_salary) as Average from manager;
 ### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
 ### QUERY:
-
-
+```
+ select designation as job , count(*) as num_of_employees from manager group by designation order by num_employees desc;
+```
 ### OUTPUT:
+![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/b0de1845-f1dd-4aa9-9d5b-767977f9a883)
