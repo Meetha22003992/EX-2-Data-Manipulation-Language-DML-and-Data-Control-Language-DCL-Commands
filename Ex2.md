@@ -150,6 +150,7 @@ select name, deptno ,salary from manager order by salary desc;
 ### OUTPUT:
 
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/4c10df17-584a-4707-9e47-02bc3cd4ab23)
+
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/f174ec56-71fd-4821-87d8-95e652a448af)
 
 
@@ -165,7 +166,9 @@ select name, deptno ,salary from manager order by salary desc;
 ### OUTPUT:
 
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/16a17b68-7443-478d-8bc4-33a7ca9fc2eb)
+
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/7ea3f5be-2619-4ef0-854a-eca5b3696a1c)
+
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/8dd1b06e-4393-4b92-a0a1-393bcc16d900)
 
 
@@ -193,7 +196,9 @@ select avg(Annual_salary) as Average from manager;
 ### OUTPUT:
 
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/84b79cf0-4c70-47c1-a365-b897636ca1e0)
+
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/59200bee-eb07-4b3d-93bc-2fc760771e29)
+
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/0c7cdfe1-a1d5-439d-9404-85f4c926443a)
 
 
