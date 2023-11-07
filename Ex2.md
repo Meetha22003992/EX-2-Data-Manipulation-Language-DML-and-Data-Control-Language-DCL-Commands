@@ -11,7 +11,9 @@ The SQL commands that deal with the manipulation of data present in the database
 ## List of DML commands: 
 <div align="justify">
 INSERT: It is used to insert data into a table.<br>
+ 
 UPDATE: It is used to update existing data within a table.<br>
+
 DELETE: It is used to delete records from a database table.<br>
 </div>
 
@@ -24,8 +26,11 @@ create table manager(enumber number(6),ename char(15),salary number(5),commissio
 ## insert the following values into the table
 
 insert into manager values(7369,'Dharsan',2500,500,30000,'30-June-81','clerk',10,'John');
+
 insert into manager values(7839,'Subu',3000,400,36000,'1-Jul-82','manager',null,'James');
+
 insert into manager values(7934,'Aadhi',3500,300,42000,'1-May-82','manager',30,NULL);
+
 insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bond');
 
 
@@ -58,6 +63,7 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### QUERY:
 
  alter table manager rename column ename to name;
+ 
  alter table manager rename column annualsalary to Annual_salary;
 
 ### OUTPUT:
@@ -144,6 +150,7 @@ select * from manager where Hiredate<1981-09-30;
 ### QUERY:
 
 select name, deptno ,salary from manager order by deptno asc;
+
 select name, deptno ,salary from manager order by salary desc;
 
 
@@ -159,7 +166,9 @@ select name, deptno ,salary from manager order by salary desc;
 ### QUERY:
 
  select name from manager where deptno != 10;
+ 
  select name from manager where deptno != 30;
+ 
  select name from manager where deptno != 40;
 
 
@@ -189,7 +198,9 @@ select name, deptno ,salary from manager order by salary desc;
 ### QUERY:
 
 select min(Annual_salary) as Minimum from manager;
+
 select max(Annual_salary) as Maximum from manager;
+
 select avg(Annual_salary) as Average from manager;
 
 
