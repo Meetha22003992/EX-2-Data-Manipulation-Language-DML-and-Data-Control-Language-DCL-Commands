@@ -22,19 +22,19 @@ create table manager(enumber number(6),ename char(15),salary number(5),commissio
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/dffade3a-1cbf-4ba3-9612-196ffd3f0a7d)
 
 ## insert the following values into the table
-```sql
+
 insert into manager values(7369,'Dharsan',2500,500,30000,'30-June-81','clerk',10,'John');
 insert into manager values(7839,'Subu',3000,400,36000,'1-Jul-82','manager',null,'James');
 insert into manager values(7934,'Aadhi',3500,300,42000,'1-May-82','manager',30,NULL);
 insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bond');
-```
+
 
 ### Q1) Update all the records of manager table by increasing 10% of their salary as bonus.
 
 ### QUERY:
-```
+
  UPDATE manager SET Salary = Salary + (Salary * 10/100);
-```
+
 ### OUTPUT:
 
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/631584f9-cb67-49a1-ab5b-2eaea2a346fc)
@@ -44,9 +44,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q2) Delete the records from manager table where the salary less than 2750.
 
 ### QUERY:
-```
+
  delete from manager where salary<2750;
-```
+
 ### OUTPUT:
 
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/64f70250-a642-4c1a-8d86-90ba71a67625)
@@ -56,10 +56,10 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q3) Display each name of the employee as “Name” and annual salary as “Annual Salary” (Note: Salary in emp table is the monthly salary)
 
 ### QUERY:
-```
+
  alter table manager rename column ename to name;
  alter table manager rename column annualsalary to Annual_salary;
-```
+
 ### OUTPUT:
 
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/f730c697-bb01-4c29-b233-19efb549697e)
@@ -68,9 +68,9 @@ insert into manager values(7788,'Vikash',4000,0,48000,'12-Aug-82','clerk',50,'Bo
 ### Q5)	List the names of Clerks from emp table.
 
 ### QUERY:
-```
+
 select name from manager where designation='clerk';
-```
+
 
 ### OUTPUT:
 
@@ -80,9 +80,9 @@ select name from manager where designation='clerk';
 ### Q6)	List the names of employee who are not Managers.
 
 ### QUERY:
-```
+
  select name from manager where designation !='manager';
-```
+
 
 ### OUTPUT:
 
@@ -92,9 +92,9 @@ select name from manager where designation='clerk';
 ### Q7)	List the names of employees not eligible for commission.
 
 ### QUERY:
-```
+
  select name from manager where commission=0;
-```
+
 
 ### OUTPUT:
 
@@ -104,9 +104,9 @@ select name from manager where designation='clerk';
 ### Q8)	List employees whose name either start or end with ‘s’.
 
 ### QUERY:
-```
+
  SELECT * FROM manager WHERE name LIKE '%S' AND name like 'S%';
-```
+
 
 ### OUTPUT:
 
@@ -116,9 +116,9 @@ select name from manager where designation='clerk';
 ### Q9) Sort emp table in ascending order by hire-date and list ename, job, deptno and hire-date.
 
 ### QUERY:
-```
+
  select * from manager order by Hiredate,name, designation,deptno asc;
-```
+
 
 ### OUTPUT:
 
@@ -129,9 +129,9 @@ select name from manager where designation='clerk';
 
 
 ### QUERY:
-```
+
 select * from manager where Hiredate<1981-09-30;
-```
+
 
 ### OUTPUT:
 
@@ -142,10 +142,10 @@ select * from manager where Hiredate<1981-09-30;
 
 
 ### QUERY:
-```
+
 select name, deptno ,salary from manager order by deptno asc;
 select name, deptno ,salary from manager order by salary desc;
-```
+
 
 ### OUTPUT:
 
@@ -157,11 +157,11 @@ select name, deptno ,salary from manager order by salary desc;
 ### Q12) List the names of employees not belonging to dept no 30,40 & 10
 
 ### QUERY:
-```
+
  select name from manager where deptno != 10;
  select name from manager where deptno != 30;
  select name from manager where deptno != 40;
-```
+
 
 ### OUTPUT:
 
@@ -175,9 +175,9 @@ select name, deptno ,salary from manager order by salary desc;
 ### Q13) Find number of rows in the table EMP
 
 ### QUERY:
-```
+
  select count(*) as no_rows from manager;
-```
+
 
 ### OUTPUT:
 
@@ -187,11 +187,11 @@ select name, deptno ,salary from manager order by salary desc;
 ### Q14) Find maximum, minimum and average salary in EMP table.
 
 ### QUERY:
-```
+
 select min(Annual_salary) as Minimum from manager;
 select max(Annual_salary) as Maximum from manager;
 select avg(Annual_salary) as Average from manager;
-```
+
 
 ### OUTPUT:
 
@@ -205,8 +205,8 @@ select avg(Annual_salary) as Average from manager;
 ### Q15) List the jobs and number of employees in each job. The result should be in the descending order of the number of employees.
 
 ### QUERY:
-```
+
  select designation as job , count(*) as num_of_employees from manager group by designation order by num_employees desc;
-```
+
 ### OUTPUT:
 ![image](https://github.com/Meetha22003992/EX-2-Data-Manipulation-Language-DML-and-Data-Control-Language-DCL-Commands/assets/119401038/b0de1845-f1dd-4aa9-9d5b-767977f9a883)
